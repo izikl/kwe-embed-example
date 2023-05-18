@@ -29,13 +29,14 @@ export const AuthComponent = () => {
       instance.loginPopup();
     };
   
-    // const handleLogout = () => {
-    //   instance.logout();
-    // };
+    const handleLogout = () => {
+      instance.logout();
+    };
   
     return (
       <div class="auth-container">
         <AuthenticatedTemplate>
+          <button onClick={handleLogout}>Logout</button>
           <App />
         </AuthenticatedTemplate>
         <UnauthenticatedTemplate>
