@@ -10,7 +10,7 @@ import './auth.css'
 
 const catsAndDogsTenantId = 'd48a02e7-63fd-4c86-960a-4d76b2e9d751';
 const azureDataExplorerTestAppId = '0289b3ad-4264-4a6c-8f0c-2c56d8177831'; // https://portal.azure.com/#view/Microsoft_AAD_RegisteredApps/ApplicationMenuBlade/~/Overview/appId/0289b3ad-4264-4a6c-8f0c-2c56d8177831/isMSAApp~/false
-const redirectUri = `${window.location.protocol}//${window.location.host}`;
+const redirectUri = `${window.location.protocol}//${window.location.host}/blank.html`;
 
 const msalConfig = {
   auth: {

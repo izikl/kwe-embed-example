@@ -25,14 +25,14 @@ export function App() {
       const handleIframeMessage = (event) => {
         console.log("event.data.type: " + event.data.type);
 
-        // const scopes = [
+        // used scopes:
         //   'People.Read',
         //   'https://kwetest.eastus.kusto.windows.net/.default',
         //   'https://rtd-metadata.azurewebsites.net/user_impersonation'
-        //   // 'User.ReadBasic.All',
-        //   // 'Group.Read.All'
-        // ];
+        //   'User.ReadBasic.All',
+        //   'Group.Read.All'
 
+        // TODO: this must be approved in ADX 
         var scopes = [event.data.scope === 'query' ? "https://kwetest.eastus.kusto.windows.net/.default" : event.data.scope];
         if (scopes[0] === 'People.Read') {
           scopes = [
@@ -47,8 +47,7 @@ export function App() {
           if (accounts.length > 0 && inProgress === InteractionStatus.None) {
             instance.acquireTokenSilent({
               scopes: scopes,
-              account: accounts[0],
-              redirectUri: '/blank.html'
+              account: accounts[0]
             })
             .then((response) => postToken(iframe, response.accessToken, event.data.scope))                
             .catch((error) => {
