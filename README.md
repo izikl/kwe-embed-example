@@ -3,6 +3,22 @@
 This project is an example of how to embed Azure Data Explorer and Azure Data Explorer dashboards in an iframe.
 OAuth authentication is done with @azure/msal-react.
 
+## Images
+
+### Query Experience
+
+:::image type="content" source="./docs/images/kwe-embed-query.png" alt-text="Query Experience":::
+
+### Dashboard Experience
+
+#### Dashboard
+
+:::image type="content" source="./docs/images/kwe-embed-dashboard.png" alt-text="Dashboards":::
+
+#### Sharing
+
+:::image type="content" source="./docs/images/kwe-embed-share-dashboard.png" alt-text="Dashboards Sharing":::
+
 ## Run the project
 
 ### prerequisites
