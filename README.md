@@ -27,5 +27,3 @@ run `npm install && npm start`
 ### Prepare for deployment  
 
 run `npm install && npm run build` and publish the `/build` folder.
-
-
