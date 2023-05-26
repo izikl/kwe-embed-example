@@ -20,6 +20,12 @@ Followed instructions in <https://learn.microsoft.com/en-us/azure/data-explorer/
 - in auth.js, replace tenantId and appId.
 - in app.js, replace iframeConfig.cluster and iframeConfig.database with your cluster/database.
 
-### build and run
+### Run locally
 
 run `npm install && npm start`
+
+### Prepare for deployment  
+
+run `npm install && npm run build` and publish the `/build` folder.
+
+
