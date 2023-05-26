@@ -36,13 +36,14 @@ function mapScope(scope) {
  * Post a postToken message
  */
 const postToken = (iframe, accessToken, scope) => {
+  console.log(`[postToken] scope: ${scope}, message length(accesstoken): ${accessToken.length}`);
   iframe.contentWindow.postMessage(
     {
       type: "postToken",
       message: accessToken,
       scope: scope,
     },
-    "*"
+    "*" // Not secure
   );
 };
 
@@ -52,7 +53,12 @@ export function App() {
 
   useEffect(() => {
     const handleIframeMessage = (event) => {
-      console.log("event.data.type: " + event.data.type);
+      if (event.data.type !== "getToken" || event.origin !== "https://dataexplorer.azure.com") {
+        console.log(`[ignored] event.data.type: ${event.data.type}, event.data.scope: ${event.data.scope}`);
+        return;
+      }
+
+      console.log(`[getToken] event.data.type: ${event.data.type}, event.data.scope: ${event.data.scope}`);
 
       const aadScopes = mapScope(event.data.scope);
 
