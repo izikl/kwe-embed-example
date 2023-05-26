@@ -7,17 +7,17 @@ OAuth authentication is done with @azure/msal-react.
 
 ### Query Experience
 
-:::image type="content" source="./docs/images/kwe-embed-query.png" alt-text="Query Experience":::
+![Query Experience](./docs/images/kwe-embed-query.png)
 
 ### Dashboard Experience
 
 #### Dashboard
 
-:::image type="content" source="./docs/images/kwe-embed-dashboard.png" alt-text="Dashboards":::
+![Dashboards](./docs/images/kwe-embed-dashboard.png)
 
 #### Sharing
 
-:::image type="content" source="./docs/images/kwe-embed-share-dashboard.png" alt-text="Dashboards Sharing":::
+![Dashboards Sharing](./docs/images/kwe-embed-share-dashboard.png)
 
 ## Run the project
 
